@@ -10,8 +10,10 @@ router.post('/register', async (req, res) =>{
         const user =  await User.create(req.body)
 
         return res.send({ user })
-        
-    }catch (error){
+
+    }catch (err){
         return res.status(400).send({ error: 'falha ao registrar'})
     }
 })
+
+module.exports = app => app.use('/auth', router)

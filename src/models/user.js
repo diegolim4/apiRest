@@ -1,4 +1,4 @@
-const mongoose = require('mongoose')
+const mongoose = require('../databases')
 
 // schema são os campos da tabela do usuários   
 const UserSchema = new mongoose.Schema({
